@@ -2,7 +2,10 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import FooterComponent from "../components/footer-component";
+import NavBarComponent from "../components/navbar/navbar.component";
 import styles from "../styles/Home.module.css";
+
+import profilePic from "../public/static/kafui-alordo.jpg";
 
 const Home: NextPage = () => {
   return (
@@ -14,88 +17,48 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              flexWrap: "wrap",
-              maxWidth: "430px",
-            }}
-          >
-            <div style={{ lineHeight: "0.501rem" }}>
+        <NavBarComponent />
+        <div className={styles.bannerContainer}>
+          <Image
+            src={profilePic}
+            alt="my profile photo"
+            width={150}
+            height={150}
+            className={styles.image}
+          />
+          <div className={styles.bannerHeroTextContainer}>
+            <div className={styles.bannerHeroText}>
               <h1>Kafui Alordo</h1>
-              <p style={{ fontSize: "0.8rem" }}>
-                Technnology Consulting and Software Engineering | Freelance
-              </p>
+              <p>Technnology Consulting and Software Engineering | Freelance</p>
             </div>
 
-            {/* <div> */}
             <p style={{ fontSize: "1rem", color: "#887956" }}>
               I love design, and build impactful software applications based on
               best practieces, for individuals, coporate and organizations.
             </p>
-            {/* </div> */}
           </div>
-          {/* <div> */}
-          <Image
-            src="/static/kafui-alordo.jpg"
-            alt="Vercel Logo"
-            width={200}
-            height={200}
-            style={{ borderRadius: "100%" }}
-          />
-          {/* </div> */}
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            // alignItems: "center",
-            // justifyContent: "center",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              maxWidth: "240px",
-              justifyContent: "center",
-            }}
-          >
-            <h4>thoughts</h4>
-          </div>
+        <div>
+          <h1>Posts</h1>
+        </div>
 
-          <div className={styles.grid}>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
+        <div className={styles.grid}>
+          <a href="#" className={styles.card}>
+            <h2>Title &rarr;</h2>
+            <p>Summary Text Here, Coming soon...</p>
+          </a>
+        </div>
 
-            <a href="https://nextjs.org/learn" className={styles.card}>
-              <h2>Learn &rarr;</h2>
-              <p>Learn about Next.js in an interactive course with quizzes!</p>
-            </a>
+        <div>
+          <h1>Projects</h1>
+        </div>
 
-            <a
-              href="https://github.com/vercel/next.js/tree/canary/examples"
-              className={styles.card}
-            >
-              <h2>Examples &rarr;</h2>
-              <p>Discover and deploy boilerplate example Next.js projects.</p>
-            </a>
-
-            <a
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              className={styles.card}
-            >
-              <h2>Deploy &rarr;</h2>
-              <p>
-                Instantly deploy your Next.js site to a public URL with Vercel.
-              </p>
-            </a>
-          </div>
+        <div className={styles.grid}>
+          <a href="#" className={styles.card}>
+            <h2>Title &rarr;</h2>
+            <p>Summary Text Here, Coming soon...</p>
+          </a>
         </div>
       </main>
 

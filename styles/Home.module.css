@@ -4,12 +4,41 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  /* padding: 2rem 0; */
   flex: 1;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
+}
+
+.bannerContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.image {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}
+
+.bannerHeroTextContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 430px;
+}
+
+.bannerHeroText {
+  line-height: 0.801rem;
+}
+
+.bannerHeroText > p {
+  font-size: 1rem;
+  line-height: 1.2rem;
 }
 
 .footer {
@@ -26,43 +55,6 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .grid {
@@ -103,11 +95,6 @@
   line-height: 1.5;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
 @media (max-width: 600px) {
   .grid {
     width: 100%;
@@ -125,5 +112,27 @@
   }
   .logo img {
     filter: invert(1);
+  }
+}
+
+
+@media (max-width: 640px) {
+  .main {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .bannerContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bannerHeroText {
+    line-height: 1rem;
+  }
+
+  .bannerHeroText > p {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }

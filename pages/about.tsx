@@ -2,7 +2,10 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import FooterComponent from "../components/footer-component";
+import NavBarComponent from "../components/navbar/navbar.component";
 import styles from "../styles/Home.module.css";
+
+import profilePic from "../public/static/kafui-alordo.jpg";
 
 const AboutPage = () => {
   return (
@@ -14,6 +17,7 @@ const AboutPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <NavBarComponent />
         <div style={{ display: "flex", alignItems: "center" }}>
           <div
             style={{
@@ -21,25 +25,24 @@ const AboutPage = () => {
               flexDirection: "column",
               flexWrap: "wrap",
               maxWidth: "800px",
+              padding: "1rem",
             }}
           >
-            <div style={{ lineHeight: "1rem" }}>
+            <div style={{ lineHeight: "1rem", marginBottom: "1rem" }}>
               <h1>| About me</h1>
-              <h4 style={{ fontSize: "1rem" }}>Hello! I&apos;m Kafui</h4>
+              {/* <h4 style={{ fontSize: "1rem" }}>Hello! I&apos;m Kafui</h4> */}
             </div>
 
             <Image
-              src="/static/kafui-alordo.jpg"
-              alt="Vercel Logo"
-              width={300}
-              height={600}
-              //   style={{ position: "absolute" }}
+              src={profilePic}
+              alt="my profile photo"
+              style={{ borderRadius: "10px" }}
             />
 
             <p style={{ fontSize: "1rem", color: "#887956" }}>
-              Am currently working as an Independent Technology Consultant and a
-              Software Engineer in Ho, Volta Region. Helping design, build and
-              manage products for clients - () and also provide coaching and
+              I&apos;m currently working as an Independent Technology Consultant
+              and a Software Engineer in Ho, Volta Region. Helping design, build
+              and manage products for clients - () and also provide coaching and
               training for organizations and at workshops.
             </p>
 
