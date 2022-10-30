@@ -1,11 +1,10 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import FooterComponent from "../components/footer-component";
-import NavBarComponent from "../components/navbar/navbar.component";
 import styles from "../styles/Home.module.css";
 
 import profilePic from "../public/static/kafui-alordo.jpg";
+import HeaderComponent from "../components/nav/header.component";
 
 const AboutPage = () => {
   return (
@@ -17,14 +16,14 @@ const AboutPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <NavBarComponent />
+        <HeaderComponent />
         <div style={{ display: "flex", alignItems: "center" }}>
           <div
             style={{
               display: "flex",
               flexDirection: "column",
               flexWrap: "wrap",
-              maxWidth: "800px",
+              maxWidth: "660px",
               padding: "1rem",
             }}
           >

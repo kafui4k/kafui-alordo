@@ -2,10 +2,10 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import FooterComponent from "../components/footer-component";
-import NavBarComponent from "../components/navbar/navbar.component";
 import styles from "../styles/Home.module.css";
 
 import profilePic from "../public/static/kafui-alordo.jpg";
+import HeaderComponent from "../components/nav/header.component";
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <NavBarComponent />
+        <HeaderComponent />
         <div className={styles.bannerContainer}>
           <Image
             src={profilePic}
@@ -32,14 +32,14 @@ const Home: NextPage = () => {
               <p>Technnology Consulting and Software Engineering | Freelance</p>
             </div>
 
-            <p style={{ fontSize: "1rem", color: "#887956" }}>
+            <p style={{ fontSize: "1.5rem", color: "#887956" }}>
               I love design, and build impactful software applications based on
               best practieces, for individuals, coporate and organizations.
             </p>
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <h1>Posts</h1>
         </div>
 
@@ -59,7 +59,7 @@ const Home: NextPage = () => {
             <h2>Title &rarr;</h2>
             <p>Summary Text Here, Coming soon...</p>
           </a>
-        </div>
+        </div> */}
       </main>
 
       <FooterComponent />
